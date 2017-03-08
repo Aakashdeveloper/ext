@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SE</title>
+
+ <link href="/Content/ext-4.2.1.883/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="/Content/ext-4.2.1.883/ext-all-debug.js"></script>
+    
+
+    <link rel="stylesheet" href="/Content/Styles/site-cssc-relative.css">
+
+    <script type="text/javascript" >
+        Ext.Loader.setConfig({
+            enabled: true
+        });
+
+        Ext.application({
+            name: 'MyApp',
+            launch: function() {
+                Ext.create('Ext.container.Viewport', {
+                    layout: 'fit',
+                    items: [
+                        {
+                            xtype: 'panel',
+                            resizable: false,
+                            layout: 'border',
+                            collapsed: false,
+                            items: [
+                                {
+                                    xtype: 'container',
+                                    region: 'center',
+                                    layout: {
+                                        type: 'vbox',
+                                        align: 'stretch'
+                                    },
+                                    items: [
+                                        {
+                                            html: 'Sessions',
+                                            flex: 6
+                                        },
+                                        {
+                                            xtype: 'splitter'
+                                        },
+                                        {
+                                            html: 'Presenters',
+                                            flex: 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    html: 'Session details',
+                                    flex: 2,
+                                    region: 'east',
+                                    split: true
+                                }
+                            ]
+                        }
+                    ]
+                });
+            }
+        });
+
+
+
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

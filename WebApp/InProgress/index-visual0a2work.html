@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SE</title>
+
+    <link href="/Content/ext-4.2.1.883/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="/Content/ext-4.2.1.883/ext-all-debug.js"></script>
+
+
+    <link rel="stylesheet" href="/Content/Styles/site-cssc-relative.css">
+
+    <script type="text/javascript">
+
+        Ext.application({
+            name: 'MyApp',
+            launch: function() {
+                Ext.create('Ext.container.Viewport', {
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                        {
+                            xtype: 'panel',
+                            layout: {
+                                type: 'vbox',
+                                align: 'stretch'
+                            },
+                            items: [
+                                {
+                                    xtype: 'panel',
+                                    html: '<b>Sessions Panel</b>',
+                                    flex: 2
+                                },
+                                {
+                                    xtype: 'panel',
+                                    html: '<b>Speakers Panel</b>',
+                                    flex: 1
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'panel',
+                            html: '<b>Details Panel</b>',
+                            flex: 3
+                        }
+                    ]
+                });
+            }
+        });
+
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>
